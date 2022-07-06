@@ -14,3 +14,7 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$bs23GriY$BmzvWrakSgCL/4U6ffYo91/
 
 #3. Replace with JerryKuKu’s Argon
 rm openwrt/feeds/luci/themes/luci-theme-argon -rf
+
+#4.fix turboacc
+sed -i '297s/stop_dnscache/revert_dns/g' openwrt/feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
+sed -i '298s/revert_dns/stop_dnscache/g' openwrt/feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
