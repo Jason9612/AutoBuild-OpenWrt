@@ -22,3 +22,7 @@ sed -i '298s/revert_dns/stop_dnscache/g' openwrt/feeds/luci/applications/luci-ap
 #5.defaut themes
 sed -i 's/Bootstrap/Argon/g' openwrt/feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' openwrt/feeds/luci/collections/luci/Makefile
+sed -i 's/Bootstrap Theme (default)/Bootstrap Theme/g' openwrt/feeds/luci/themes/luci-theme-bootstrap/Makefile
+sed -i 's/set luci.main.mediaurlbase/#&/' openwrt/feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+sed -i '' openwrt/feeds/luci/themes/luci-theme-material/root/etc/uci-defaults/30_luci-theme-material
+sed -i '' openwrt/feeds/luci/themes/luci-theme-netgear/root/etc/uci-defaults/30_luci-theme-netgear
