@@ -7,8 +7,7 @@
 
 name: Build_Newifi_D2
 
-on: 
-  repository_dispatch:
+on:
   workflow_dispatch:
     inputs:
       ssh:
