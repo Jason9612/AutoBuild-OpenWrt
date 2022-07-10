@@ -17,8 +17,8 @@ sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99
 rm openwrt/feeds/luci/themes/luci-theme-argon -rf
 
 #4.fix turboacc
-sed -i '297s/stop_dnscache/revert_dns/g' openwrt/feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
-sed -i '298s/revert_dns/stop_dnscache/g' openwrt/feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
+sed -i '308s/stop_dnscache/revert_dns/g' openwrt/feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
+sed -i '309s/revert_dns/stop_dnscache/g' openwrt/feeds/luci/applications/luci-app-turboacc/root/etc/init.d/turboacc
 
 #5.defaut themes
 sed -i 's/Bootstrap/Argon/g' openwrt/feeds/luci/collections/luci/Makefile
