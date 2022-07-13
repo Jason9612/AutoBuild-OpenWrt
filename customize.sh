@@ -6,12 +6,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 #1. Modify default IP
-sed -i 's/192.168.1.1/10.10.10.13/g' openwrt/package/base-files/files/bin/config_generate
-sed -i 's/192.168.$((addr_offset++)).1/10.10.$((addr_offset++)).13/g' openwrt/package/base-files/files/bin/config_generate 
-
-#2. change the login password
-sed -i '/root::0:0:99999:7:::/s/^/#/' openwrt/package/lean/default-settings/files/zzz-default-settings
-sed -i 's/root::0:0:99999:7:::/root:$1$iZM.01X5$xfeRwcqbhN\/60\/2SUPwDc\/:0:0:99999:7:::/g' openwrt/package/base-files/files/etc/shadow
+sed -i 's/192.168.1.1/192.168.123.1/g' openwrt/package/base-files/files/bin/config_generate
 
 #3. Replace with JerryKuKu’s Argon
 rm openwrt/feeds/luci/themes/luci-theme-argon -rf
